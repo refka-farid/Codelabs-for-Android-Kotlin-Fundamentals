@@ -6,7 +6,6 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var diceImage1: ImageView
     private lateinit var diceImage2: ImageView
@@ -18,8 +17,9 @@ class MainActivity : AppCompatActivity() {
         diceImage2 = findViewById(R.id.dice_image2)
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
+        val clearButton: Button = findViewById(R.id.clear_button)
+        clearButton.setOnClickListener { clearDce() }
     }
-
 
     private fun rollDice() {
         diceImage1.setImageResource(getRandomDiceImage())
@@ -37,5 +37,10 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
         return drawableResource
+    }
+
+    private fun clearDce() {
+        diceImage1.setImageResource(R.drawable.empty_dice)
+        diceImage2.setImageResource(R.drawable.empty_dice)
     }
 }
