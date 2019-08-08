@@ -31,13 +31,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <TextView
-                android:text="@string/bio"
+        <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bio_text"
-                style="@style/NameStyle"
-                android:lineSpacingMultiplier="1.2"/>
+                android:layout_height="wrap_content">
 
+            <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/avatar"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:id="@+id/imageView2"/>
+
+            <TextView
+                    android:text="@string/bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bio_text"
+                    style="@style/NameStyle"
+                    android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
