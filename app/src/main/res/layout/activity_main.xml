@@ -19,6 +19,34 @@
             tools:text="Aleks Haecky"
             style="@style/NameStyle"/>
 
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/what_is_your_nickname"
+            android:textAlignment="center"
+            style="@style/NameStyle"
+            android:ems="10"
+            android:id="@+id/nickname_edit"/>
+    <Button
+            android:text="@string/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/done_button"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+    <TextView
+            android:text=""
+            android:background="@color/colorAccent"
+            android:paddingBottom="@dimen/small_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/NameStyle"
+            android:id="@+id/nickname_text"
+            android:visibility="gone"/>
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,14 +62,16 @@
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompoundDrawables">
 
             <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/avatar"
                     tools:srcCompat="@tools:sample/avatars"
-                    android:id="@+id/imageView2"/>
+                    android:id="@+id/imageView2"
+                    android:contentDescription="@string/avatar"/>
 
             <TextView
                     android:text="@string/bio"
