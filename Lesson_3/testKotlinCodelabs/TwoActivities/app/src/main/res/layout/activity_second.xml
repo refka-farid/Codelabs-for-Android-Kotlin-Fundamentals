@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteX="124dp"
         tools:layout_editor_absoluteY="291dp" />
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/reply_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -41,7 +41,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
-        android:id="@+id/editText_second"
+        android:id="@+id/reply_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,7 +50,7 @@
         android:ems="10"
         android:hint="@string/editText_second"
         android:inputType="textLongMessage"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_second"
-        app:layout_constraintEnd_toStartOf="@+id/button_second"
+        app:layout_constraintBaseline_toBaselineOf="@+id/reply_button"
+        app:layout_constraintEnd_toStartOf="@+id/reply_button"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

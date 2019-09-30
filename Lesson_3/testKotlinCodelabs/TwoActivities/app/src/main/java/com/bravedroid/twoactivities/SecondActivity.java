@@ -18,19 +18,18 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        mReply = findViewById(R.id.editText_second);
+        mReply = findViewById(R.id.reply_editText);
         Intent intent = getIntent();
         String message = intent.getStringExtra(EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.text_message);
         textView.setText(message);
     }
 
-
     public void returnReply(View view) {
         String reply = mReply.getText().toString();
-        Intent replayIntent = new Intent();
-        replayIntent.putExtra(EXTRA_REPLY, reply);
-        setResult(RESULT_OK, replayIntent);
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, reply);
+        setResult(RESULT_OK, replyIntent);
         Log.d(LOG_TAG, "***********End SecondActivity*****");
         finish();
     }
